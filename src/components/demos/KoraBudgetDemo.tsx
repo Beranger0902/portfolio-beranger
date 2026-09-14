@@ -10,7 +10,7 @@ type Tx = { id: number; label: string; amount: number; category: string; type: "
 const categories = ["Loyer", "Salaires", "Matériel", "Cotisations", "Subventions", "Divers"];
 const colors: Record<string, string> = {
   Loyer: "#a78bfa",
-  Salaires: "#c9a227",
+  Salaires: "#cf7046",
   Matériel: "#34d399",
   Cotisations: "#38bdf8",
   Subventions: "#f472b6",

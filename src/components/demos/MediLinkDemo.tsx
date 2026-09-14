@@ -7,7 +7,7 @@ import DemoFrame from "./DemoFrame";
 
 const doctors = [
   { id: 1, name: "Dr Adjovi", spec: "Médecine générale", color: "#38bdf8", busy: ["09:00", "10:30", "15:00"] },
-  { id: 2, name: "Dr Sènou", spec: "Pédiatrie", color: "#c9a227", busy: ["08:30", "11:00", "14:00", "16:30"] },
+  { id: 2, name: "Dr Sènou", spec: "Pédiatrie", color: "#cf7046", busy: ["08:30", "11:00", "14:00", "16:30"] },
   { id: 3, name: "Dr Hounkpè", spec: "Cardiologie", color: "#34d399", busy: ["08:00", "09:30", "14:30"] },
 ];
 const days = ["Lun 14", "Mar 15", "Mer 16", "Jeu 17", "Ven 18"];

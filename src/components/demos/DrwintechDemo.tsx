@@ -104,7 +104,7 @@ export default function DrwintechDemo() {
               <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
                 <motion.div
                   className="h-full rounded-full"
-                  style={{ background: p.ms < 250 ? "#34d399" : p.ms < 350 ? "#c9a227" : "#fb923c" }}
+                  style={{ background: p.ms < 250 ? "#34d399" : p.ms < 350 ? "#cf7046" : "#fb923c" }}
                   initial={{ width: 0 }}
                   animate={{ width: `${(p.ms / 500) * 100}%` }}
                   transition={{ duration: 0.8, delay: 0.3 + i * 0.08 }}

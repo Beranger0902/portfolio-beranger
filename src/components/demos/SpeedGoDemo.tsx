@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Bike, MapPin, Navigation, Star } from "lucide-react";
@@ -86,7 +86,7 @@ export default function SpeedGoDemo() {
           <circle cx="40" cy="470" r="16" fill="#fb923c" opacity="0.25">
             <animate attributeName="r" values="12;22;12" dur="2s" repeatCount="indefinite" />
           </circle>
-          {dest && <circle cx="260" cy="80" r="8" fill="#c9a227" />}
+          {dest && <circle cx="260" cy="80" r="8" fill="#cf7046" />}
         </svg>
 
         {/* Recherche */}

@@ -56,7 +56,7 @@ export default function EventsDemo() {
       <div className="grid gap-3 sm:grid-cols-4">
         {[
           ["Inscrits", list.length, Users, "#f472b6"],
-          ["Billets vendus", list.length, Ticket, "#c9a227"],
+          ["Billets vendus", list.length, Ticket, "#cf7046"],
           ["Revenus", `${stats.revenue.toLocaleString("fr-FR")} F`, Ticket, "#34d399"],
           ["Présence", `${stats.rate} %`, ScanLine, "#38bdf8"],
         ].map(([l, v, Icon, c]) => {

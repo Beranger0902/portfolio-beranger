@@ -181,6 +181,16 @@ export default function Hero() {
         </motion.div>
       </div>
 
+      {/* Astuce particules */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        className="pointer-events-none absolute bottom-8 right-8 hidden max-w-[260px] text-right text-[11px] leading-5 text-navy-300 lg:block"
+      >
+        Déplacez le curseur pour attirer les particules · maintenez le clic pour les rassembler
+      </motion.p>
+
       {/* Indicateur de scroll */}
       <motion.a
         href="#apropos"

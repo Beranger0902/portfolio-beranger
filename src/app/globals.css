@@ -5,7 +5,7 @@
 :root {
   --navy: #0b1f3a;
   --navy-2: #102b4c;
-  --gold: #c9a227;
+  --gold: #cf7046;
   --cream: #f7f3ea;
   --ink: #172033;
 }
@@ -34,7 +34,7 @@ body {
   background: var(--navy);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #e1c45c, #a4841c);
+  background: linear-gradient(180deg, #e39a74, #9a4a2a);
   border-radius: 999px;
   border: 2px solid var(--navy);
 }
@@ -42,8 +42,8 @@ body {
 /* Motifs de fond */
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(201, 162, 39, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 162, 39, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(207, 112, 70, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(207, 112, 70, 0.08) 1px, transparent 1px);
   background-size: 34px 34px;
 }
 
@@ -63,7 +63,7 @@ body {
 
 /* Texte dégradé doré */
 .text-gold-gradient {
-  background: linear-gradient(120deg, #f3dc87 0%, #c9a227 45%, #e1c45c 70%, #a4841c 100%);
+  background: linear-gradient(120deg, #f0b48f 0%, #cf7046 45%, #e39a74 70%, #a8522f 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -81,7 +81,7 @@ body {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: conic-gradient(from var(--angle, 0deg), transparent 0%, #c9a227 20%, transparent 40%);
+  background: conic-gradient(from var(--angle, 0deg), transparent 0%, #cf7046 20%, transparent 40%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -162,7 +162,7 @@ body {
   border-radius: 999px;
   pointer-events: none;
   z-index: 40;
-  background: radial-gradient(circle, rgba(201, 162, 39, 0.18) 0%, rgba(201, 162, 39, 0) 60%);
+  background: radial-gradient(circle, rgba(207, 112, 70, 0.16) 0%, rgba(207, 112, 70, 0) 60%);
   transform: translate(-50%, -50%);
   transition: opacity 0.4s;
   mix-blend-mode: screen;

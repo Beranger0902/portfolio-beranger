@@ -11,7 +11,7 @@ export default function ProjectCard({ project, featured = false }: { project: Pr
   const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), { stiffness: 200, damping: 20 });
   const rotateY = useSpring(useMotionValue(0), { stiffness: 200, damping: 20 });
-  const glow = useMotionTemplate`radial-gradient(400px circle at ${x}px ${y}px, rgba(201,162,39,0.18), transparent 60%)`;
+  const glow = useMotionTemplate`radial-gradient(400px circle at ${x}px ${y}px, rgba(207,112,70,0.18), transparent 60%)`;
 
   const onMove = (e: MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();

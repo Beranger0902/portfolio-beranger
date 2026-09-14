@@ -21,7 +21,7 @@ const initial: Parcel[] = [
 
 const cols: { key: Status; label: string; color: string }[] = [
   { key: "pending", label: "En attente", color: "#8fa4bd" },
-  { key: "transit", label: "En route", color: "#c9a227" },
+  { key: "transit", label: "En route", color: "#cf7046" },
   { key: "delivered", label: "Livré", color: "#34d399" },
 ];
 
@@ -65,7 +65,7 @@ export default function AfriFlowDemo() {
           {[
             ["Colis", parcels.length, "#38bdf8"],
             ["En attente", count("pending"), "#8fa4bd"],
-            ["En route", count("transit"), "#c9a227"],
+            ["En route", count("transit"), "#cf7046"],
             ["Livrés", `${rate} %`, "#34d399"],
           ].map(([l, v, c]) => (
             <div key={l as string} className="rounded-xl border border-white/10 bg-white/5 px-4 py-2.5">

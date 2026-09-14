@@ -19,9 +19,9 @@ module.exports = {
           950: "#040c1a",
         },
         gold: {
-          DEFAULT: "#c9a227",
-          light: "#e1c45c",
-          dark: "#a4841c",
+          DEFAULT: "#cf7046",
+          light: "#e39a74",
+          dark: "#9a4a2a",
         },
         cream: "#f7f3ea",
         ink: "#172033",
@@ -87,12 +87,12 @@ module.exports = {
         gradient: "gradient 8s ease infinite",
       },
       boxShadow: {
-        glow: "0 0 40px rgba(201, 162, 39, 0.35)",
-        "glow-sm": "0 0 18px rgba(201, 162, 39, 0.3)",
+        glow: "0 0 40px rgba(207, 112, 70, 0.35)",
+        "glow-sm": "0 0 18px rgba(207, 112, 70, 0.3)",
         card: "0 20px 60px -20px rgba(11, 31, 58, 0.35)",
       },
       backgroundImage: {
-        "gold-gradient": "linear-gradient(135deg, #e1c45c 0%, #c9a227 50%, #a4841c 100%)",
+        "gold-gradient": "linear-gradient(135deg, #e39a74 0%, #cf7046 50%, #a8522f 100%)",
         "navy-gradient": "linear-gradient(160deg, #102b4c 0%, #0b1f3a 55%, #040c1a 100%)",
       },
     },
