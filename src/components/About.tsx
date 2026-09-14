@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Award, Code2, Heart, Rocket } from "lucide-react";
@@ -29,7 +29,7 @@ export default function About() {
               <img
                 src={profile.photo}
                 alt="Beranger Agbodainon"
-                className="aspect-square w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="aspect-square w-full object-cover object-[center_30%] transition-transform duration-700 hover:scale-105" onError={(e) => { const img = e.currentTarget; if (!img.src.endsWith("/profile.svg")) img.src = "/profile.svg"; }}
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-900/90 to-transparent p-6 text-cream">
                 <p className="font-display text-xl font-bold">Beranger Agbodainon</p>

@@ -2,8 +2,8 @@
 export const profile = {
   name: "Beranger Agbodainon",
   role: "Développeur full-stack · Architecture SaaS",
-  // Remplace par "/profile.jpg" après avoir déposé ta photo dans public/
-  photo: "/profile.svg",
+  // Photo dans public/profile.jpg (repli : public/profile.svg)
+  photo: "/profile.jpg",
   email: "berangeragbodainon@gmail.com",
   phone: "",
   location: "Womey-Sodo, Abomey-Calavi, Bénin",

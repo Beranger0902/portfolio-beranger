@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Code2, Database, Eye, Github, Layers, Linkedin, Sparkles } from "lucide-react";
@@ -117,7 +117,7 @@ export default function Hero() {
             <div className="gradient-border relative rounded-3xl border border-gold/30 bg-navy-700/70 p-7 shadow-card backdrop-blur-xl">
               <div className="mb-7 flex items-center gap-4">
                 <div className="relative">
-                  <img src={profile.photo} alt="Beranger Agbodainon" className="h-16 w-16 rounded-2xl object-cover ring-2 ring-gold/60" />
+                  <img src={profile.photo} alt="Beranger Agbodainon" className="h-16 w-16 rounded-2xl object-cover object-[center_30%] ring-2 ring-gold/60" onError={(e) => { const img = e.currentTarget; if (!img.src.endsWith("/profile.svg")) img.src = "/profile.svg"; }} />
                   <span className="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 ring-2 ring-navy-700">
                     <span className="h-2 w-2 rounded-full bg-navy-900" />
                   </span>
