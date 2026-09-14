@@ -94,7 +94,7 @@ export default function Hero() {
 
           <motion.div {...fade(0.65)} className="mt-14 flex flex-wrap gap-8 border-t border-white/10 pt-8">
             {[
-              ["3+", "années de code"],
+              ["7", "mois d'expérience pro"],
               ["7", "projets réalisés"],
               ["15+", "technologies maîtrisées"],
             ].map(([n, l]) => (

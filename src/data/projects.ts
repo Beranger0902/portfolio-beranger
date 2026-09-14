@@ -30,7 +30,7 @@ export const projects: Project[] = [
     category: "Projet professionnel — Drwintech",
     kind: "pro",
     year: "2026",
-    cover: "/projects/presences.svg",
+    cover: "/projects/presences.webp",
     accent: "#2dd4bf",
     description:
       "Conception et développement d'une plateforme de gestion des présences des employés par géolocalisation, avec tableau de bord RH en temps réel.",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     category: "Projet professionnel — Drwintech",
     kind: "pro",
     year: "2026",
-    cover: "/projects/drwintech.svg",
+    cover: "/projects/drwintech.webp",
     accent: "#60a5fa",
     description:
       "Développement du front-end avec Next.js et du back-end avec Prisma ORM, avec une attention portée à la structuration du code et aux performances.",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     category: "Projet professionnel — Drwintech",
     kind: "pro",
     year: "2026",
-    cover: "/projects/events.svg",
+    cover: "/projects/events.webp",
     accent: "#f472b6",
     description:
       "Développement d'une plateforme de gestion d'événements avec Next.js et Drizzle ORM, modélisation de la base de données et documentation technique.",
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     category: "Hackathon — FRIARE 2025",
     kind: "pro",
     year: "2025",
-    cover: "/projects/speedgo.svg",
+    cover: "/projects/speedgo.webp",
     accent: "#fb923c",
     description:
       "Développement du back-end en API REST, conception UI/UX et réalisation du prototype de présentation d'une application mobile.",
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     category: "Projet de démonstration",
     kind: "demo",
     year: "2026",
-    cover: "/projects/afriflow.svg",
+    cover: "/projects/afriflow.webp",
     accent: "#34d399",
     description:
       "Plateforme SaaS de gestion des flux de livraison adaptée aux petites entreprises africaines : suivi des colis, tournées et livreurs.",
@@ -185,7 +185,7 @@ export const projects: Project[] = [
     category: "Projet de démonstration",
     kind: "demo",
     year: "2026",
-    cover: "/projects/korabudget.svg",
+    cover: "/projects/korabudget.webp",
     accent: "#a78bfa",
     description:
       "Outil de suivi budgétaire simple pour associations, entrepreneurs et organisations locales : dépenses, recettes et prévisions.",
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     category: "Projet de démonstration",
     kind: "demo",
     year: "2026",
-    cover: "/projects/medilink.svg",
+    cover: "/projects/medilink.webp",
     accent: "#38bdf8",
     description:
       "Plateforme de prise de rendez-vous et de suivi administratif pour structures de santé : agenda des praticiens, dossiers patients et rappels.",

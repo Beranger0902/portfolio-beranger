@@ -45,7 +45,7 @@ export default function ProjectCard({ project, featured = false }: { project: Pr
         <img
           src={project.cover}
           alt={project.title}
-          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-90" />

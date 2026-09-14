@@ -76,7 +76,7 @@ export default function ProjectHero({ project }: { project: Project }) {
           transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="relative mt-12 overflow-hidden rounded-t-3xl border border-b-0 border-white/10 shadow-card"
         >
-          <motion.img style={{ y, scale }} src={project.cover} alt={project.title} className="aspect-[16/9] w-full object-cover" />
+          <motion.img style={{ y, scale }} src={project.cover} alt={project.title} className="aspect-[16/10] w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-transparent opacity-40" />
         </motion.div>
       </div>

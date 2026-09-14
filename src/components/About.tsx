@@ -44,9 +44,9 @@ export default function About() {
               className="absolute -right-6 -top-6 rounded-2xl bg-navy-800 px-5 py-4 text-cream shadow-card"
             >
               <p className="font-display text-2xl font-extrabold text-gold">
-                <Counter to={3} suffix="+" />
+                <Counter to={7} />
               </p>
-              <p className="text-xs uppercase tracking-wider text-navy-200">ans d&apos;expérience</p>
+              <p className="text-xs uppercase tracking-wider text-navy-200">mois d&apos;expérience</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.5, rotate: 10 }}
