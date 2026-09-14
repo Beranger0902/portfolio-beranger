@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
@@ -35,10 +35,10 @@ export default function Contact() {
             <div className="relative grid gap-12 lg:grid-cols-[1fr_1.1fr]">
               <div>
                 <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-gold">Contact</p>
-                <h2 className="font-display text-3xl font-extrabold leading-tight md:text-4xl">
+                <h2 className="font-display text-2xl font-extrabold leading-tight md:text-3xl">
                   Construisons quelque chose <span className="text-gold-gradient">d&apos;utile.</span>
                 </h2>
-                <p className="mt-5 max-w-xl text-lg leading-8 text-navy-100">
+                <p className="mt-4 max-w-xl text-base leading-7 text-navy-100">
                   Vous avez un projet web, une plateforme SaaS ou une idée de produit numérique ? Échangeons sur vos
                   besoins — je réponds généralement sous 24 h.
                 </p>

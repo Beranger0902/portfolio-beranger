@@ -46,10 +46,10 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
           <div>
             <Reveal>
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-gold">Le projet</p>
-              <h2 className="font-display text-2xl font-extrabold text-navy md:text-3xl">Contexte & solution</h2>
+              <h2 className="font-display text-xl font-extrabold text-navy md:text-2xl">Contexte & solution</h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
+              <div className="mt-6 space-y-4 text-base leading-7 text-slate-600">
                 {project.longDescription.map((p) => (
                   <p key={p.slice(0, 30)}>{p}</p>
                 ))}
@@ -57,7 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
             </Reveal>
 
             <Reveal delay={0.15}>
-              <h3 className="mt-12 font-display text-2xl font-bold text-navy">Fonctionnalités clés</h3>
+              <h3 className="mt-12 font-display text-xl font-bold text-navy">Fonctionnalités clés</h3>
             </Reveal>
             <Stagger className="mt-6 grid gap-3 sm:grid-cols-2">
               {project.features.map((f) => (
@@ -140,7 +140,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
           <div className="relative mx-auto max-w-6xl">
             <Reveal>
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-gold">Démo interactive</p>
-              <h2 className="font-display text-2xl font-extrabold md:text-3xl">Testez {project.title}</h2>
+              <h2 className="font-display text-xl font-extrabold md:text-2xl">Testez {project.title}</h2>
               <p className="mt-3 max-w-2xl text-navy-100">
                 Une version simplifiée et fonctionnelle de l&apos;application, qui tourne directement dans votre navigateur. Cliquez, saisissez, explorez.
               </p>

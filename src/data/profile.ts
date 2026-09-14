@@ -4,6 +4,7 @@ export const profile = {
   role: "Développeur full-stack · Architecture SaaS",
   // Photo dans public/profile.jpg (repli : public/profile.svg)
   photo: "/profile.jpg",
+  avatar: "/profile-avatar.jpg",
   email: "berangeragbodainon@gmail.com",
   phone: "",
   location: "Womey-Sodo, Abomey-Calavi, Bénin",

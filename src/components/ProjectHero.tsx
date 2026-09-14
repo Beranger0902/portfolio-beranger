@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowLeft, Calendar, Layers } from "lucide-react";
@@ -41,7 +41,7 @@ export default function ProjectHero({ project }: { project: Project }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-5 max-w-4xl font-display text-3xl font-extrabold leading-tight md:text-5xl"
+            className="mt-5 max-w-4xl font-display text-2xl font-extrabold leading-tight md:text-4xl"
           >
             {project.title}
           </motion.h1>
@@ -49,7 +49,7 @@ export default function ProjectHero({ project }: { project: Project }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-4 max-w-2xl text-xl text-navy-100"
+            className="mt-3 max-w-2xl text-lg text-navy-100"
           >
             {project.tagline}
           </motion.p>

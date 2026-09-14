@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -24,7 +24,7 @@ export default function Projects() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-gold">Réalisations</p>
-              <h2 className="font-display text-3xl font-extrabold text-navy md:text-4xl">
+              <h2 className="font-display text-2xl font-extrabold text-navy md:text-3xl">
                 Projets & <span className="text-gold-gradient">démos interactives</span>
               </h2>
               <p className="mt-4 max-w-2xl text-slate-600">

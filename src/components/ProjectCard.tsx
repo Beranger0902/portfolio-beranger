@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
 import { ArrowUpRight, ExternalLink, Github, Play } from "lucide-react";
@@ -66,7 +66,7 @@ export default function ProjectCard({ project, featured = false }: { project: Pr
       {/* Contenu */}
       <div className="flex flex-1 flex-col p-6" style={{ transform: "translateZ(30px)" }}>
         <p className={`text-xs font-bold uppercase tracking-widest ${dark ? "text-gold" : "text-gold-dark"}`}>{project.category}</p>
-        <h3 className="mt-2 font-display text-xl font-extrabold leading-tight">
+        <h3 className="mt-2 font-display text-lg font-extrabold leading-tight">
           <Link href={`/projets/${project.slug}`} className="transition-colors group-hover:text-gold">
             {project.title}
           </Link>

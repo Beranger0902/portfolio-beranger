@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Briefcase, GraduationCap, Trophy } from "lucide-react";
@@ -73,7 +73,7 @@ function Column({ title, items }: { title: string; items: typeof experiences }) 
   return (
     <div>
       <Reveal>
-        <h3 className="font-display text-2xl font-bold text-gold">{title}</h3>
+        <h3 className="font-display text-xl font-bold text-gold">{title}</h3>
       </Reveal>
       <div ref={ref} className="relative mt-8 pl-10">
         <div className="absolute bottom-0 left-[15px] top-0 w-[2px] bg-white/10" />
@@ -126,7 +126,7 @@ export default function Timeline() {
       <div className="relative mx-auto max-w-7xl">
         <Reveal>
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-gold">Parcours</p>
-          <h2 className="font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="font-display text-2xl font-extrabold md:text-3xl">
             Formation & <span className="text-gold-gradient">expériences</span>
           </h2>
         </Reveal>

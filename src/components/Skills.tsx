@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Code2, Database, Globe2, Server, ShieldCheck, Terminal } from "lucide-react";
@@ -84,7 +84,7 @@ export default function Skills() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-gold">Expertise</p>
-              <h2 className="font-display text-3xl font-extrabold text-navy md:text-4xl">
+              <h2 className="font-display text-2xl font-extrabold text-navy md:text-3xl">
                 Compétences <span className="text-gold-gradient">techniques</span>
               </h2>
             </div>
@@ -107,7 +107,7 @@ export default function Skills() {
                     <Icon className="h-6 w-6" />
                   </span>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-navy">{title}</h3>
+                    <h3 className="font-display text-lg font-bold text-navy">{title}</h3>
                     <p className="text-xs text-slate-500">{description}</p>
                   </div>
                 </div>

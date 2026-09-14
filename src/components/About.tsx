@@ -32,7 +32,7 @@ export default function About() {
                 className="aspect-square w-full object-cover object-[center_30%] transition-transform duration-700 hover:scale-105" onError={(e) => { const img = e.currentTarget; if (!img.src.endsWith("/profile.svg")) img.src = "/profile.svg"; }}
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-900/90 to-transparent p-6 text-cream">
-                <p className="font-display text-xl font-bold">Beranger Agbodainon</p>
+                <p className="font-display text-lg font-bold">Beranger Agbodainon</p>
                 <p className="text-sm text-navy-100">Développeur full-stack · Cotonou</p>
               </div>
             </div>
@@ -43,7 +43,7 @@ export default function About() {
               transition={{ delay: 0.4, type: "spring" }}
               className="absolute -right-6 -top-6 rounded-2xl bg-navy-800 px-5 py-4 text-cream shadow-card"
             >
-              <p className="font-display text-3xl font-extrabold text-gold">
+              <p className="font-display text-2xl font-extrabold text-gold">
                 <Counter to={3} suffix="+" />
               </p>
               <p className="text-xs uppercase tracking-wider text-navy-200">ans d&apos;expérience</p>
@@ -55,7 +55,7 @@ export default function About() {
               transition={{ delay: 0.6, type: "spring" }}
               className="absolute -bottom-6 -left-6 rounded-2xl bg-gold-gradient px-5 py-4 text-navy shadow-glow"
             >
-              <p className="font-display text-3xl font-extrabold">
+              <p className="font-display text-2xl font-extrabold">
                 <Counter to={7} />
               </p>
               <p className="text-xs font-bold uppercase tracking-wider">projets livrés</p>
@@ -67,12 +67,12 @@ export default function About() {
         <div>
           <Reveal>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-gold">À propos</p>
-            <h2 className="font-display text-3xl font-extrabold leading-tight text-navy md:text-4xl">
+            <h2 className="font-display text-2xl font-extrabold leading-tight text-navy md:text-3xl">
               Transformer une idée en <span className="text-gold-gradient">produit fiable.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="mt-7 space-y-5 text-lg leading-8 text-slate-600">
+            <div className="mt-6 space-y-4 text-base leading-7 text-slate-600">
               <p>
                 Mon objectif est de participer à la création de solutions numériques qui répondent à des
                 besoins concrets : gestion, mobilité, événementiel, ressources humaines et services.

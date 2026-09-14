@@ -39,7 +39,7 @@ export default function Hero() {
             Disponible pour de nouveaux projets
           </motion.div>
 
-          <motion.h1 {...fade(0.2)} className="font-display text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl xl:text-[3.5rem]">
+          <motion.h1 {...fade(0.2)} className="font-display text-2xl font-extrabold leading-[1.12] tracking-tight sm:text-3xl md:text-4xl xl:text-[2.75rem]">
             Je conçois des
             <br />
             plateformes{" "}
@@ -48,7 +48,7 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          <motion.p {...fade(0.35)} className="mt-8 max-w-2xl text-lg leading-8 text-navy-100">
+          <motion.p {...fade(0.35)} className="mt-6 max-w-2xl text-base leading-7 text-navy-100 md:text-lg md:leading-8">
             Je suis <span className="font-bold text-cream">Beranger Agbodainon</span>, développeur full-stack
             passionné par la conception de produits web modernes et de solutions SaaS adaptées aux réalités
             africaines. Next.js, Laravel, PostgreSQL — du schéma de données à l&apos;interface.
@@ -99,7 +99,7 @@ export default function Hero() {
               ["15+", "technologies maîtrisées"],
             ].map(([n, l]) => (
               <div key={l}>
-                <p className="font-display text-2xl font-extrabold text-gold">{n}</p>
+                <p className="font-display text-xl font-extrabold text-gold">{n}</p>
                 <p className="text-sm text-navy-200">{l}</p>
               </div>
             ))}
@@ -117,13 +117,13 @@ export default function Hero() {
             <div className="gradient-border relative rounded-3xl border border-gold/30 bg-navy-700/70 p-7 shadow-card backdrop-blur-xl">
               <div className="mb-7 flex items-center gap-4">
                 <div className="relative">
-                  <img src={profile.photo} alt="Beranger Agbodainon" className="h-16 w-16 rounded-2xl object-cover object-[center_30%] ring-2 ring-gold/60" onError={(e) => { const img = e.currentTarget; if (!img.src.endsWith("/profile.svg")) img.src = "/profile.svg"; }} />
+                  <img src={profile.avatar} alt="Beranger Agbodainon" className="h-16 w-16 rounded-2xl object-cover ring-2 ring-gold/60" onError={(e) => { const img = e.currentTarget; if (!img.src.endsWith("/profile.svg")) img.src = "/profile.svg"; }} />
                   <span className="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 ring-2 ring-navy-700">
                     <span className="h-2 w-2 rounded-full bg-navy-900" />
                   </span>
                 </div>
                 <div>
-                  <p className="font-display text-lg font-bold">Beranger Agbodainon</p>
+                  <p className="font-display text-base font-bold">Beranger Agbodainon</p>
                   <p className="text-sm text-navy-200">Full-stack & Architecture SaaS</p>
                 </div>
               </div>
