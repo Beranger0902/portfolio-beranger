@@ -2,16 +2,16 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Download, ExternalLink, FileText, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
+
+const CvViewer = dynamic(() => import("./CvViewer"), { ssr: false });
 
 export const CV_URL = "/CV_Beranger_Agbodainon.pdf";
 
 export default function CvModal({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const [loaded, setLoaded] = useState(false);
-
   useEffect(() => {
     if (!open) return;
-    setLoaded(false);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -83,31 +83,9 @@ export default function CvModal({ open, onClose }: { open: boolean; onClose: () 
               </div>
             </div>
 
-            {/* Aperçu */}
-            <div className="relative flex-1 bg-navy-950">
-              {!loaded && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-navy-200">
-                  <div className="h-12 w-12 animate-spin rounded-full border-4 border-gold/20 border-t-gold" />
-                  <p className="text-sm">Chargement de l&apos;aperçu…</p>
-                </div>
-              )}
-              <iframe
-                title="Aperçu du CV"
-                src={`${CV_URL}#toolbar=0&navpanes=0&view=FitH`}
-                className="h-full w-full"
-                onLoad={() => setLoaded(true)}
-              />
-              {/* Repli mobile : certains navigateurs mobiles n'affichent pas les PDF dans un iframe */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center p-4 sm:hidden">
-                <a
-                  href={CV_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-navy-700 px-4 py-2 text-xs font-semibold text-cream shadow-lg ring-1 ring-white/10"
-                >
-                  <ExternalLink className="h-4 w-4" /> L&apos;aperçu ne s&apos;affiche pas ? Ouvrir le PDF
-                </a>
-              </div>
+            {/* Aperçu rendu par pdf.js (fonctionne sur mobile) */}
+            <div className="relative min-h-0 flex-1 bg-navy-950">
+              <CvViewer url={CV_URL} />
             </div>
           </motion.div>
         </motion.div>

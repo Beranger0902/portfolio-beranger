@@ -1,23 +1,59 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { CheckCircle2, Github, Linkedin, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { profile } from "@/data/profile";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const submit = (e: FormEvent) => {
-    e.preventDefault();
+  // Clé Web3Forms (https://web3forms.com) : si définie, le message arrive directement par e-mail.
+  const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+  const composed = () => `${form.subject ? `*${form.subject}*\n\n` : ""}${form.message}\n\n— ${form.name}${form.email ? ` · ${form.email}` : ""}`;
+
+  const sendWhatsApp = () => {
+    window.open(`${profile.whatsapp}?text=${encodeURIComponent(composed())}`, "_blank", "noopener");
+  };
+
+  const sendEmail = () => {
     const subject = encodeURIComponent(form.subject || `Contact depuis le portfolio — ${form.name}`);
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`);
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${encodeURIComponent(composed())}`;
+  };
+
+  const submit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!web3formsKey) return sendWhatsApp();
+    setStatus("sending");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: web3formsKey,
+          subject: form.subject || `Contact depuis le portfolio — ${form.name}`,
+          from_name: form.name,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message);
+      setStatus("sent");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   const cards = [
     { Icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
+    { Icon: Phone, label: "Téléphone", value: profile.phone, href: `tel:${profile.phoneRaw}` },
+    { Icon: MessageCircle, label: "WhatsApp", value: profile.phone, href: profile.whatsapp },
     { Icon: MapPin, label: "Localisation", value: profile.location },
     { Icon: Linkedin, label: "LinkedIn", value: "beranger-agbodainon", href: profile.linkedin },
     { Icon: Github, label: "GitHub", value: "Beranger0902", href: profile.github },
@@ -99,15 +135,44 @@ export default function Contact() {
                     className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-cream placeholder:text-navy-300 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30"
                   />
                 </div>
-                <motion.button
-                  type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="shine-card mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient px-6 py-3.5 font-bold text-navy shadow-glow"
-                >
-                  <Send className="h-4 w-4" /> Envoyer le message
-                </motion.button>
-                <p className="mt-3 text-center text-xs text-navy-300">Ouvre votre messagerie avec le message pré-rempli.</p>
+                {status === "sent" ? (
+                  <div className="mt-6 flex items-center gap-3 rounded-2xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-sm text-emerald-300">
+                    <CheckCircle2 className="h-5 w-5 shrink-0" /> Message envoyé ! Je vous réponds très vite.
+                  </div>
+                ) : (
+                  <>
+                    <motion.button
+                      type="submit"
+                      disabled={status === "sending"}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="shine-card mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient px-6 py-3.5 font-bold text-navy shadow-glow disabled:opacity-60"
+                    >
+                      {web3formsKey ? (
+                        <>
+                          <Send className="h-4 w-4" /> {status === "sending" ? "Envoi en cours…" : "Envoyer le message"}
+                        </>
+                      ) : (
+                        <>
+                          <MessageCircle className="h-4 w-4" /> Envoyer via WhatsApp
+                        </>
+                      )}
+                    </motion.button>
+                    <div className="mt-3 flex items-center justify-center gap-4 text-xs text-navy-300">
+                      {web3formsKey && (
+                        <button type="button" onClick={sendWhatsApp} className="inline-flex items-center gap-1 font-semibold text-cream/80 hover:text-gold">
+                          <MessageCircle className="h-3.5 w-3.5" /> ou via WhatsApp
+                        </button>
+                      )}
+                      <button type="button" onClick={sendEmail} className="inline-flex items-center gap-1 font-semibold text-cream/80 hover:text-gold">
+                        <Mail className="h-3.5 w-3.5" /> ou par e-mail
+                      </button>
+                    </div>
+                    {status === "error" && (
+                      <p className="mt-3 text-center text-xs text-red-300">L&apos;envoi a échoué — utilisez WhatsApp ou l&apos;e-mail ci-dessus.</p>
+                    )}
+                  </>
+                )}
               </motion.form>
             </div>
           </div>

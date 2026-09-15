@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import { profile } from "@/data/profile";
 
@@ -16,6 +16,8 @@ export default function Footer() {
             { href: profile.github, Icon: Github, label: "GitHub" },
             { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
             { href: `mailto:${profile.email}`, Icon: Mail, label: "Email" },
+            { href: `tel:${profile.phoneRaw}`, Icon: Phone, label: "Téléphone" },
+            { href: profile.whatsapp, Icon: MessageCircle, label: "WhatsApp" },
           ].map(({ href, Icon, label }) => (
             <a
               key={label}
